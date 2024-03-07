@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Functions</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="slice()">SLICE</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="shift()">SHIFT</button>
+</body>
+<script type="text/javascript">
+    //method-1
+    var fruits = ["Mango", "Apple", "Bannana", "Grapes"];
+    var demo = fruits;
+    document.getElementById("res").innerHTML = demo;
+    function pop(){
+        demo.pop();
+        document.getElementById("res").innerHTML = demo;
+    }
+    function push(){
+        var a = prompt("Enter a fruit","");
+        demo.push(a);
+        document.getElementById("res").innerHTML = demo;
+    }
+    function slice(){
+        var x = demo.slice(2,3);
+        document.getElementById("res").innerHTML = x;
+    }
+    function reverse(){
+        var x = demo.reverse();
+        document.getElementById("res").innerHTML = x;
+    }
+    function shift(){
+        var x = demo.shift();
+        document.getElementById("res").innerHTML = x;
+    }
+</script>
+</html>

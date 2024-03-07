@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <input type="" name="u_name"/>
+    <button onclick="getname()">Summit</button>
+    <h1></h1>
+</body>
+<script type="text/javascript">
+       function getname(){
+        var uname = document.getElementsByName("u_name")[0];
+        //document.write(uname);
+        //console.log(uname);
+        document.getElementsByTagName("h1")[0].innerHTML = uname.Value;
+       } 
+</script>
+</html>

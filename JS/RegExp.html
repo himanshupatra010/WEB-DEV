@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Document</title>
+ </head>
+ <body>
+    
+ </body>
+ <script type="text/javascript">
+    //var pattern = /[a-z][0-9]/i;
+    //var pattern = new RegExp("[a-z][0-9]","i")
+    var pattern = new RegExp("(?=.*[a-z])");
+    var str = "WSC125";
+    //console.log(pattern.exec(str));
+    //console.log(pattern.test(str));
+    //console.log(pattern.toString(str));
+    console.log(pattern.test(str));
+ </script>
+ </html>

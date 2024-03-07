@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date methods</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="getDate()">Date</button>
+    <button onclick="getyear()">Year</button>
+    <button onclick="month()">Month</button>
+    <button onclick="hour()">Hour</button>
+    <button onclick="todate()">Date</button>
+    <button onclick="time()">Time</button>
+</body>
+<script type="text/javascript">
+    var date = new Date();
+    function getDate(){
+        document.getElementById("res").innerHTML = date;
+    }
+    function getyear(){
+        document.getElementById("res").innerHTML = date.getFullYear();
+    }
+    function month(){
+        var month = ["January", "February"];
+        document.getElementById("res").innerHTML = month[date.getMonth()];
+    }
+    function todate(){
+        document.getElementById("res").innerHTML = date.getDate();
+    }
+    function time(){
+        document.getElementById("res").innerHTML = date.getTime();
+    }
+    
+</script>
+</html>

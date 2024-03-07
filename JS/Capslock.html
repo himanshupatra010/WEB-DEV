@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+   
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return validate()">
+        <p1>
+            <h1 style="font-size: 30px; text-align: center;">wscubetech<br/>Registration Form</h1>
+        </p1>
+        <p>
+            <label for="username">UserName</label>
+            <input id="username" name="username" type="password"/> 
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"/> 
+        </p>
+        <p>
+            <label for="confirm_password">Confirm_Password</label>
+            <input id="confirm_password" name="confirm_password" type="password" onkeyup="check(this)"/>
+            <error id="alert"></error>
+        </p>
+        <p>
+            <input id="summit" type="submit" value="Summit"/>
+        </p>
+    </form>
+    
+</body>
+<script type="text/javascript">
+    var password = document.getElementById("password");
+    var flag = 1; //1==No error, 0==error.
+    function check(elem){
+        if(elem.value.length>0){
+            if(elem.value!=password.value){
+                document.getElementById("alert").innerText = "Password does not match";
+                flag = 0;
+            }else{
+                document.getElementById('alert').innerText = "";
+                flag = 0;
+            }
+        }else{
+            document.getElementById('alert').innerText = "";
+            flag = 0;
+        }
+    }
+    function validate(){
+        if(flag==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    window.addEventListener('keyup',event => {
+       var is = event.getModifierState('CapsLock');
+       if(is){
+        document.getElementById("alert").innerText = "Warning! Caps Lock is On";
+       }else{
+            document.getElementById("alert").innerText = "";
+       }
+    })
+</script>
+</html>

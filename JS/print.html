@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <center>
+        <img src="logo1.png" />
+        <p id="data">
+            Remember that becoming a DevOps engineer is a continuous learning process, and this 6-month plan is just the beginning. Continue to learn new technologies, collaborate with teams, and participate in open-source projects to deepen your knowledge and experience. Good luck!
+        </p>
+    </center>
+    <button onclick="Print()">Print</button>    
+</body>
+<script type="text/javascript">
+    function Print(){
+        //window.print();
+        var body = document.getElementById("body").innerHTML;
+        var data = document.getElementById("data").innerHTML;
+        document.getElementById("data").innerHTML = data;
+        //alert(data)
+        window.print(data);
+    }
+</script>
+</html>
