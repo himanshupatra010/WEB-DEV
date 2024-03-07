@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    width: 100%;
+    height: 250px;
+    border: 2px solid blue;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.sun{
+    width: 120px;
+    height: 120px;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: -30px;
+    animation: sun 10s linear;
+    animation-delay: 2s;
+    opacity: 0.4;
+}
+.cloud1{
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    opacity: 0.7;
+    animation: cloud1 5s linear;
+}
+.cloud2{
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    opacity: 0.7;
+    animation: cloud2 5s linear;
+    animation-delay: 5s;
+}
+.cloud3{
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    opacity: 0.7;
+    animation: cloud3 5s linear;
+    animation-delay: 2s;
+}
+@keyframes cloud1{
+    from{
+        top: 20px;
+        left: -30px;
+    }
+    to{
+        top: 20px;
+        left: 300px;
+    }
+}
+@keyframes cloud2{
+    from{
+        top: 20px;
+        left: 300px;
+    }
+    to{
+        top: 20px;
+        left: 500px;
+    }
+}
+@keyframes cloud3{
+    from{
+        top: 20px;
+        right: -30px;
+    }
+    to{
+        top: 20px;
+        right: 500px;
+    }
+}
+@keyframes sun{
+    from{
+        top: 25px;
+        left: -30px;
+        background-color: orange;
+        opacity: 0.4;
+    }
+    to{
+        top: 25px;
+        left: 500px;
+        background-color: orange;
+        opacity: 1;
+    }
+}
